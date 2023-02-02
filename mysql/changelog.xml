@@ -10,7 +10,7 @@
 		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
   
 
-    <changeSet  id="1"  author="nvoxland">  
+    <changeSet  id="1"  author="maheedhar">  
         <createTable  tableName="person">  
             <column  name="id"  type="int"  autoIncrement="true">  
                 <constraints  primaryKey="true"  nullable="false"/>  
@@ -23,15 +23,5 @@
         </createTable>  
     </changeSet>  
 
-    <changeSet  id="2"  author="nvoxland">  
-        <addColumn  tableName="person">  
-            <column  name="username"  type="varchar(8)"/>  
-        </addColumn>  
-    </changeSet>  
-    <changeSet  id="3"  author="nvoxland">  
-        <addLookupTable  
-            existingTableName="person"  existingColumnName="state"  
-            newTableName="state"  newColumnName="id"  newColumnDataType="char(2)"/>  
-    </changeSet>  
 
 </databaseChangeLog>
