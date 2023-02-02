@@ -52,7 +52,7 @@
         <column  name="id"  value="123"/>
         <column  name="firstname"  value="Maheedhar"/>
         <column  name="lastname"  value="Talluri"/>
-        <column  name="state"  value="TS">
+        <column  name="state">
             <constraints nullable="false" references="state(id)"/>
         </column>
         <column  name="username"  value="Mahi"/>     
