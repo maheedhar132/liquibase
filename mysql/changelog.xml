@@ -37,7 +37,7 @@
         
 
     <changeSet id="4" author="Maheedhar">
-        <insert  catalogName="department"  
+        <insert  catalogName="liquibase_test"  
             dbms="!h2, mysql"  
             schemaName="public"  
             tableName="person">  
