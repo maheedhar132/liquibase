@@ -53,7 +53,9 @@
         <column  name="id"  value="123"/>
         <column  name="firstname"  value="Maheedhar"/>
         <column  name="lastname"  value="Talluri"/>
-        <column  name="state"  value="1"/>
+        <column  name="state"  value="1">
+            <constraints nullable="false" foreginKeyName="FK_PERSON_STATE" references="state(id)">
+        </column>
         <column  name="username"  value="Mahi"/>     
     </insert>
     </changeSet>
