@@ -10,7 +10,7 @@
 		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
   
 
-    <changeSet  id="1"  author="maheedhar">  
+    <changeSet  id="1"  author="Maheedhar">  
         <createTable  tableName="person">  
             <column  name="id"  type="int"  autoIncrement="true">  
                 <constraints  primaryKey="true"  nullable="false"/>  
@@ -37,11 +37,7 @@
 
 
     <changeSet id="4" author="Maheedhar">
-        <delete  catalogName="cat"  
-            schemaName="public"  
-            tableName="person">  
-        <where>name='Bob'</where>  
-    </delete>  
+        <
     </changeSet>
 
 </databaseChangeLog>
