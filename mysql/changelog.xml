@@ -59,4 +59,27 @@
     </insert>
     </changeSet>
 
+    <changeSet id="6" author="Maheedhar">
+        <insert  catalogName="liquibase_test"  
+            dbms="!h2, mysql"  
+            schemaName="public"  
+            tableName="state">  
+        <column  name="id"  value="TS"/>    
+    </insert>
+    </changeSet>   
+        <changeSet id="7" author="Sasidhar">
+        <insert  catalogName="liquibase_test"  
+            dbms="!h2, mysql"  
+            schemaName="public"  
+            tableName="person">  
+        <column  name="id"  value="456"/>
+        <column  name="firstname"  value="Sasi"/>
+        <column  name="lastname"  value="T"/>
+        <column  name="state">
+            <constraints nullable="false" references="state(id)"/>
+        </column>
+        <column  name="username"  value="Sasi"/>     
+    </insert>
+    </changeSet>
+
 </databaseChangeLog>
