@@ -34,7 +34,12 @@
             existingTableName="person"  existingColumnName="state"  
             newTableName="state"  newColumnName="id"  newColumnDataType="char(2)"/>  
     </changeSet>  
-
+        <insert  catalogName="department"  
+            dbms="!h2, mysql"  
+            schemaName="public"  
+            tableName="person">  
+        <column  name="address"  value="address value"/>  
+    </insert>  
 
     <changeSet id="4" author="Maheedhar">
         
