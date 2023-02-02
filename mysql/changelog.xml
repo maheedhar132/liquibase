@@ -41,7 +41,7 @@
             dbms="!h2, mysql"  
             schemaName="public"  
             tableName="person">  
-        <column  name="address"  value="address value"/>  
+        <column  name="id"  value="123"/>  
     </insert>
     </changeSet>
 
