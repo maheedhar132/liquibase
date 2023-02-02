@@ -54,7 +54,7 @@
         <column  name="firstname"  value="Maheedhar"/>
         <column  name="lastname"  value="Talluri"/>
         <column  name="state"  value="1">
-            <constraints nullable="false" references="state(id)">
+            <constraints nullable="false" references="state(id)"/>
         </column>
         <column  name="username"  value="Mahi"/>     
     </insert>
