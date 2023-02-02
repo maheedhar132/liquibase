@@ -23,5 +23,25 @@
         </createTable>  
     </changeSet>  
 
+    <changeSet  id="2"  author="Maheedhar">  
+        <addColumn  tableName="person">  
+            <column  name="username"  type="varchar(8)"/>  
+        </addColumn>  
+    </changeSet>
+
+    <changeSet  id="3"  author="Maheedhar">  
+        <addLookupTable  
+            existingTableName="person"  existingColumnName="state"  
+            newTableName="state"  newColumnName="id"  newColumnDataType="char(2)"/>  
+    </changeSet>  
+
+
+    <changeSet id="4" author="Maheedhar">
+        <delete  catalogName="cat"  
+            schemaName="public"  
+            tableName="person">  
+        <where>name='Bob'</where>  
+    </delete>  
+    </changeSet>
 
 </databaseChangeLog>
