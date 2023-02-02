@@ -41,7 +41,11 @@
             dbms="!h2, mysql"  
             schemaName="public"  
             tableName="person">  
-        <column  name="id"  value="123"/>  
+        <column  name="id"  value="123"/>
+        <column  name="firstname"  value="Maheedhar"/>
+        <column  name="lastname"  value="Talluri"/>
+        <column  name="state"  value="AP"/>
+        <column  name="username"  value="Mahi"/>     
     </insert>
     </changeSet>
 
