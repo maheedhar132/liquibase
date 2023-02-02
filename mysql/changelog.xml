@@ -39,8 +39,9 @@
         <insert  catalogName="liquibase_test"  
             dbms="!h2, mysql"  
             schemaName="public"  
-            tableName="person.state">  
-        <column  name="id"  value="AP"/>    
+            tableName="state">  
+        <column  name="id"  value="AP"/>
+        <column  name="id"  value="TS"/>    
     </insert>
     </changeSet>        
 
@@ -52,7 +53,7 @@
         <column  name="id"  value="123"/>
         <column  name="firstname"  value="Maheedhar"/>
         <column  name="lastname"  value="Talluri"/>
-        <column  name="state"  value="AP"/>
+        <column  name="state"  value="1"/>
         <column  name="username"  value="Mahi"/>     
     </insert>
     </changeSet>
