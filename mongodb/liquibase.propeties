@@ -1,3 +1,2 @@
-changelogFile: changelog.xml
 url: mongodb://localhost:27017/liquibase_test
 classpath: drivers/liquibase-mongodb-4.19.0.jar
