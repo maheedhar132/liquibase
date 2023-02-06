@@ -35,7 +35,7 @@
 			</ext:options>
 		</ext:createCollection>
 	</changeSet>
-		<changeSet id="1" author="Maheedhar">
+		<changeSet id="2" author="Maheedhar">
 		<ext:insertMany collectionName="myCollection">
 			<ext:options>
                   {
