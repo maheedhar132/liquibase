@@ -50,17 +50,6 @@
           "comment": "Populate person table",
           "changes": [
             {
-              "insertOne": {
-                "collectionName": "person",
-                "document": {
-                  "$rawJson": {
-                    "name": "Alexandru Slobodcicov",
-                    "address": "Moldova"
-                  }
-                }
-              }
-            },
-            {
               "insertMany": {
                 "collectionName": "person",
                 "documents": {
