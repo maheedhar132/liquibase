@@ -47,6 +47,6 @@
                     "address": null
                   }
 			</ext:options>
-		</ext:createCollection>
+		</ext:insertMany>
 	</changeSet>
 </databaseChangeLog>
