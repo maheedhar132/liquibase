@@ -1,52 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <databaseChangeLog
-	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
-	xmlns:pro="http://www.liquibase.org/xml/ns/pro"
-	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
-		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
-		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
-	<changeSet id="1" author="Maheedhar">
-		<ext:createCollection collectionName="myCollection">
-			<ext:options>
-			{
-				validator: {
-					$jsonSchema: {
-						bsonType: "object",
-						required: ["name", "address"],
-						properties: {
-							name: {
-								bsonType: "string",
-								description: "The Name"
-							},
-							address: {
-								bsonType: "string",
-								description: "The Address"
-							}
-						}
-					}
-				},
-				validationAction: "warn",
-				validationLevel: "strict"
-			}
-			</ext:options>
-		</ext:createCollection>
-	</changeSet>
-		<changeSet id="2" author="Maheedhar">
-		<ext:insertMany collectionName="myCollection">
-			<ext:options>
-                  {
-                    "name": "Nicolas Bodros",
-                    "address": "Spain"
-                  },
-                  {
-                    "name": "Luka Modrich",
-                    "address": null
-                  }
-			</ext:options>
-		</ext:insertMany>
-	</changeSet>
+    <changeSet id="1" author="alex">
+        <ext:insertMany collectionName="person">
+            <ext:documents>
+                [
+                    {
+                      "name": "Nicolas Bodros",
+                      "address": "Spain",
+                      "age": 34
+                    },
+                    {
+                      "name": "Luka Modrich",
+                      "address": null,
+                      "age": 55
+                    }
+                  ]
+            </ext:documents>
+
+        </ext:insertMany>
+    </changeSet>
+
 </databaseChangeLog>
