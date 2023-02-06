@@ -9,7 +9,7 @@
 		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
 		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
 
-	<changeSet id="1" author="bob">
+	<changeSet id="1" author="Maheedhar">
 		<ext:createCollection collectionName="myCollection">
 			<ext:options>
 			{
@@ -32,6 +32,20 @@
 				validationAction: "warn",
 				validationLevel: "strict"
 			}
+			</ext:options>
+		</ext:createCollection>
+	</changeSet>
+		<changeSet id="1" author="Maheedhar">
+		<ext:insertMany collectionName="myCollection">
+			<ext:options>
+                  {
+                    "name": "Nicolas Bodros",
+                    "address": "Spain"
+                  },
+                  {
+                    "name": "Luka Modrich",
+                    "address": null
+                  }
 			</ext:options>
 		</ext:createCollection>
 	</changeSet>
